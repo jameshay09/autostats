@@ -1,0 +1,835 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Auto Stats</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+    <script src="js/jquery-2.2.2.js"> </script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/jquery.arbitrary-anchor.js" type="text/javascript"> </script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="js/car.js" type="text/javascript"> </script>
+    
+    <script>
+    	$(document).ready(function() {
+	  $('.resp-nav').hide();
+	  $('.burger').click(function() {
+	   $('.resp-nav').slideToggle(750);
+	   });
+	   
+	       $('.resp-nav').click(function() {
+	       $('.resp-nav').fadeOut(600);
+	       }); 
+		   
+		       $('#login_container').hide();
+	           $('.login_icon').click(function(){
+	               $('#login_container').fadeIn(600);
+	           
+	           }); 
+	           
+	           $('.login_button').click(function(){
+	               $('#login_container').fadeOut(600);
+	           
+	           }); 
+	           
+	           $('.cancelbtn').click(function(){
+	               $('#login_container').fadeOut(600);
+	               });
+	               
+	               $('.wrapper, .cross8').hide();
+	               $('.search_icon').click(function(){
+	                   $('.wrapper, .cross8').fadeIn(600);
+	               }); 
+	               
+	               $('.searchButton').click(function(){
+	                   $('.wrapper, .cross8').fadeOut(600);
+	                   
+	                   }); 
+	                                 
+	               $('.cross8').click(function(){
+	                   $('.wrapper, .cross8').fadeOut(600);
+	                   
+	                   }); 
+					   
+					   
+					     $('#mot_history').hide();
+					   $('#mot').click(function(){
+						 $('#car_details, #mygarage, #service_info, #mileage_details').fadeOut(300);
+						 setTimeout(function(){$('#mot_history').fadeIn(300)},300);
+				
+	                   }); 
+			
+						
+						 $('#mileage_details').hide();
+					   $('#mileage').click(function(){
+						 $('#car_details, #mygarage, #service_info, #mot_history').fadeOut(300);
+						 setTimeout(function(){$('#mileage_details').fadeIn(300)},300);
+				
+	                   }); 
+					   
+						 $('#car_info_tab').click(function(){
+							 $('#mot_history, #mygarage, #service_info, #mileage_details').fadeOut(300);
+								 setTimeout(function(){$('#car_details').fadeIn(300)},300);
+						 
+						  }); 
+						  
+						  $('#mygarage').hide();
+						  $('#garage').click(function(){
+							  $('#car_details, #mot_history, #service_info, #mileage_details').fadeOut(300);
+							   setTimeout(function(){$('#mygarage').fadeIn(300)},300);
+						  
+					     }); 
+						 
+						 
+						      $('#service_info').hide();
+					   $('#services').click(function(){
+						 $('#car_details, #mygarage, #mot_history, #mileage_details').fadeOut(300);
+						 setTimeout(function(){$('#service_info').fadeIn(300)},300);
+				
+	                   }); 
+					   
+					   $('#mot_issues').hide();
+					   $('#mot_box1').click(function(){
+						   $('#mot_issues').fadeIn(300);
+						   
+				  }); 
+				  
+				    $('#mot_issues1').hide();
+					   $('#mot_box2').click(function(){
+						   $('#mot_issues1').fadeIn(300);
+						   
+						     }); 
+						   
+						      $('#mot_issues2').hide();
+					   $('#mot_box3').click(function(){
+						   $('#mot_issues2').fadeIn(300);
+						   
+						     }); 
+							 
+							 
+							 
+							    $('#mot_issues3').hide();
+					   $('#mot_box4').click(function(){
+						   $('#mot_issues3').fadeIn(300);
+						   
+						     }); 
+							 
+							 
+							    $('#mot_issues4').hide();
+					   $('#mot_box5').click(function(){
+						   $('#mot_issues4').fadeIn(300);
+						   
+						     }); 
+							 
+							 
+							    $('#mot_issues5').hide();
+					   $('#mot_box6').click(function(){
+						   $('#mot_issues5').fadeIn(300);
+						   
+						     }); 
+							 
+							    $('#mot_issues6').hide();
+					   $('#mot_box7').click(function(){
+						   $('#mot_issues6').fadeIn(300);
+						   
+						     }); 
+							 
+							    $('#mot_issues7').hide();
+					   $('#mot_box8').click(function(){
+						   $('#mot_issues7').fadeIn(300);
+						   
+						     }); 
+						   
+				  
+				  $('.cross').click(function(){
+					  $('#mot_issues').fadeOut(300);
+						 						 
+						  }); 
+						  
+						    $('.cross').click(function(){
+					  $('#mot_issues1').fadeOut(300);
+						 						 
+						  }); 
+						  
+						    $('.cross').click(function(){
+					  $('#mot_issues2').fadeOut(300);
+						 						 
+						  }); 
+						  
+						  
+						    $('.cross').click(function(){
+					  $('#mot_issues3').fadeOut(300);
+						 						 
+						  }); 
+						  
+						  
+						    $('.cross').click(function(){
+					  $('#mot_issues4').fadeOut(300);
+						 						 
+						  }); 
+						  
+						  
+						    $('.cross').click(function(){
+					  $('#mot_issues5').fadeOut(300);
+						 						 
+						  }); 
+						  
+						  
+						    $('.cross').click(function(){
+					  $('#mot_issues6').fadeOut(300);
+						 						 
+						  }); 
+						  
+						    $('.cross').click(function(){
+					  $('#mot_issues7').fadeOut(300);
+						 						 
+						  }); 
+						  
+						   });
+
+					   
+					   
+					   </script>
+    
+</head>
+
+<body>
+
+<div id="stats">
+
+<div class="burger"><img alt="navigation" src="img/burger.png"></div>
+
+	<div class="resp-nav">
+			<a class="resp-link" href="index.html"><b>Home</b></a> 
+             <a class="resp-link" href="contact.html"><b>Contact</b></a>
+		</div>
+
+<div class="login_icon"><img alt="search" src="img/login.png"></div>
+
+	<div id="login_container">
+			<form action="/action_page.php" class="login">
+				<div class="imgcontainer"><img alt="Avatar" class="avatar" src="img/user_1.png"></div>
+				<div class="container">
+					<label><b>Username</b></label>
+                     <input name="uname" placeholder="Test_account" required="" type="poop"> <label><b>Password</b></label> <input name="psw" placeholder="Test_account" required="" type="password"> <input class="login_button" type="button" value="Log in"> <input checked="checked" type="checkbox"> Remember me
+				</div>
+				<div class="container" style="background-color:#f1f1f1">
+					<button class="cancelbtn" type="button">Cancel</button> <span class="psw">Forgot <a href="#">password?</a></span>
+				</div>
+			</form>
+		</div>
+        
+        <!------ Car details !------>
+
+<div id="car_details">
+
+<div id="car_info">
+
+<p class="Vehicle_details_title">Vehicle Details </p>
+
+<div class="reg_title">
+<form id="vehicle-smart-sample-form">
+            <!--<img src="img/plate.png" alt="enter plate here">-->
+            <input type="text" id="reg" placeholder="Enter Reg" maxlength="8"/>
+            <br/>
+            <br/>
+            <button class="submit" type="submit">Search</button>
+            
+        </form>
+</div>
+
+
+	
+
+<div id = "details">
+      </div>
+	
+
+
+<div id="mot_details">
+
+
+</div>
+
+<p class="road_tax"> </p>
+
+<p class="tax_status"> </p>
+
+</div>
+
+</div>
+	
+	<!----- Milage !------->
+	
+	
+<div id="mileage_details">
+	
+	<div id="chart_div"></div>
+	
+	
+	<p class="mileage_avg"> Average Mile Per Year: 9,444</p>
+	<p class="mileage_high"> Highest Miles Between MOT: 11,442</p>
+	
+	
+
+</div>
+
+<!----- Mot history !------->
+<div id="mot_history">
+<div id="mot_info">
+
+<p class="Vehicle_details_title">M.O.T History </p>
+
+<div id="top_cont">
+
+<div id="mot_box1">
+<br/>
+
+<img src="img/mot_icon.png" height="40px" width="50px" alt="mot"/>
+
+<p class="pass"> </p>
+
+<br/>
+<br/>
+
+<p class="mot_test">
+ </p>
+
+</div>
+
+<div id="mot_box2">
+
+<br/>
+
+<img src="img/mot_icon.png" height="40px" width="50px" alt="mot"/>
+
+<p class="pass1"> </p>
+
+<br/> <br/>
+
+<p class="mot_test1">
+ </p>
+
+</div>
+
+<div id="mot_box3">
+
+<br/>
+<img src="img/mot_icon.png" height="40px" width="50px" alt="mot"/>
+
+<p class="pass2"> </p>
+
+<br/>
+<br/>
+
+<p class="mot_test2">
+<br/>
+
+ </p>
+
+
+</div>
+
+<div id="mot_box4">
+
+<br/>
+<img src="img/mot_icon.png" height="40px" width="50px" alt="mot"/>
+
+<p class="pass3"> </p>
+
+<br/>
+<br/>
+
+<p class="mot_test3">
+<br/>
+
+ </p>
+
+
+</div>
+
+</div>
+
+<div id="bot_cont">
+
+<div id="mot_box5">
+
+<br/>
+<img src="img/mot_icon.png" height="40px" width="50px" alt="mot"/>
+
+<p class="pass4"> </p>
+
+<br/>
+<br/>
+
+<p class="mot_test4">
+<br/>
+
+ </p>
+
+
+</div>
+
+<div id="mot_box6">
+
+<br/>
+<img src="img/mot_icon.png" height="40px" width="50px" alt="mot"/>
+
+<p class="pass5"> </p>
+
+<br/>
+<br/>
+
+<p class="mot_test5">
+<br/>
+
+ </p>
+
+
+</div>
+
+<div id="mot_box7">
+
+<br/>
+<img src="img/mot_icon.png" height="40px" width="50px" alt="mot"/>
+
+<p class="pass6"> </p>
+
+<br/>
+<br/>
+
+<p class="mot_test6">
+<br/>
+
+ </p>
+
+
+</div>
+
+<div id="mot_box8">
+
+<br/>
+<img src="img/mot_icon.png" height="40px" width="50px" alt="mot"/>
+
+<p class="pass7"> </p>
+
+<br/>
+<br/>
+
+<p class="mot_test7">
+<br/>
+
+ </p>
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="mot_issues">
+
+<div class="cross">
+
+<img src="img/cross.png" alt="cross"/>
+
+</div>
+
+<p class="mot_issue_title"><strong>M.O.T Details </strong></p>
+
+<p class="mot_overview">
+
+
+</p>
+
+</div>
+
+<div id="mot_issues1">
+
+<div class="cross">
+
+<img src="img/cross.png" alt="cross"/>
+
+</div>
+
+<p class="mot_issue_title"><strong>M.O.T Details </strong></p>
+
+<p class="mot_overview1">
+
+
+</p>
+
+</div>
+
+<div id="mot_issues2">
+
+<div class="cross">
+
+<img src="img/cross.png" alt="cross"/>
+
+</div>
+
+<p class="mot_issue_title"><strong>M.O.T Details </strong></p>
+
+<p class="mot_overview2">
+
+
+</p>
+
+</div>
+
+<div id="mot_issues3">
+
+<div class="cross">
+
+<img src="img/cross.png" alt="cross"/>
+
+</div>
+
+<p class="mot_issue_title"><strong>M.O.T Details </strong></p>
+
+<p class="mot_overview3">
+
+
+</p>
+
+</div>
+
+<div id="mot_issues4">
+
+<div class="cross">
+
+<img src="img/cross.png" alt="cross"/>
+
+</div>
+
+<p class="mot_issue_title"><strong>M.O.T Details </strong></p>
+
+<p class="mot_overview4">
+
+
+</p>
+
+</div>
+
+<div id="mot_issues5">
+
+<div class="cross">
+
+<img src="img/cross.png" alt="cross"/>
+
+</div>
+
+<p class="mot_issue_title"><strong>M.O.T Details </strong></p>
+
+<p class="mot_overview5">
+
+
+</p>
+
+</div>
+
+<div id="mot_issues6">
+
+<div class="cross">
+
+<img src="img/cross.png" alt="cross"/>
+
+</div>
+
+<p class="mot_issue_title"><strong>M.O.T Details </strong></p>
+
+<p class="mot_overview6">
+
+
+</p>
+
+</div>
+
+<div id="mot_issues7">
+
+<div class="cross">
+
+<img src="img/cross.png" alt="cross"/>
+
+</div>
+
+<p class="mot_issue_title"><strong>M.O.T Details </strong></p>
+
+<p class="mot_overview7">
+
+
+</p>
+
+</div>
+
+
+
+
+
+
+</div>
+<!------ My garage !------>
+
+<div id="mygarage">
+
+<p class="Vehicle_details_title">My Garage </p>
+
+
+
+<p class="details"></p>
+<div id="car_1">
+<img src="img/my_car.png" alt="blue background" />
+</div>
+<div id="car_2">
+<img src="img/dads_car.png" alt="blue background" />
+</div>
+<div id="car_3">
+<img src="img/stacies_car.png" alt="purple background" />
+</div>
+<div id="new_car">
+<img src="img/add_new.png" alt="purple background"/>
+</div>
+
+<div id="icons">
+
+<img src="img/make_icon.png" alt="make" height="50" width="50"/>
+
+<br/>
+<br/>
+
+<img src="img/model_icon.png" alt="Model" height="45" width="45"/>
+<br/>
+<br/>
+
+<img src="img/user_1.png" alt="user" height="50" width="50"/>
+
+</div>
+
+<div id="icons1">
+
+<img src="img/make_icon.png" alt="make" height="50" width="50"/>
+
+<br/>
+<br/>
+
+<img src="img/model_icon.png" alt="Model" height="45" width="45"/>
+<br/>
+<br/>
+
+<img src="img/user_1.png" alt="user" height="50" width="50"/>
+
+</div>
+
+<div id="icons2">
+
+<img src="img/make_icon.png" alt="make" height="50" width="50"/>
+
+<br/>
+<br/>
+
+<img src="img/model_icon.png" alt="Model" height="45" width="45"/>
+<br/>
+<br/>
+
+<img src="img/user_1.png" alt="user" height="50" width="50"/>
+
+</div>
+
+
+
+
+
+<p class="garage_details">
+<br/>
+Make: Audi
+<br/>
+<br/>
+<br/>
+Model: S3
+<br/>
+<br/>
+<br/>
+Owner: You
+<br/>
+<br/>
+<br/>
+</p>
+<p class="garage_details">
+<br/>
+Make: Audi
+<br/>
+<br/>
+<br/>
+Model: Q5
+<br/>
+<br/>
+<br/>
+Owner: Your Husband.
+<br/>
+<br/>
+<br/>
+</p>
+<p class="garage_details">
+<br/>
+Make: Fiat
+<br/>
+<br/>
+<br/>
+Model: 500
+<br/>
+<br/>
+<br/>
+Owner: Your Daughter.
+<br/>
+<br/>
+<br/>
+</p>
+<p class="garage_details">
+<br/>
+Add a new vehicle
+
+<br/>
+by clicking above
+ and
+ <br/>
+  entering a valid reg.
+
+</p>
+</div>
+
+<div id="service_info">
+<p class="Vehicle_details_title" style="margin-left:40px;">Services</p>
+<p class="service_details">
+Overview:
+<br/>
+<br/>
+You can upload a picture of your vehicle by clicking choose file.
+<br/>
+<br/>
+<input type="file" accept="image/*" onchange="loadFile(event)">
+<img id="output"/>
+<script>
+  var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
+</script>
+</p>
+<p class="service_details">
+Notifications:
+<br/>
+<br/>
+Mot: <input type="checkbox" checked="checked" name="notifications" style="margin-left: 90px;">
+<br/>
+<br/>
+Tax: <input type="checkbox" checked="checked" name="notifications" style="margin-left: 93px;">
+<br/>
+</p>
+<p class="service_details">
+Vehicle Notes:
+<br/>
+<br/>
+<textarea id="t_area" rows="4" cols="50" style="background-color: rgba(0, 0, 0, 0);border: none;color: white;">Add notes here:</textarea>
+<br/>
+<button id="btn" style="display:none"><img src="img/new_note1.png" alt="reg"/></button>
+<br/>
+</p>
+<p class="service_details">
+Important Numbers:
+<br/>
+<br/>
+<textarea id="t_area1" rows="4" cols="50" style="background-color: rgba(0, 0, 0, 0);border: none;color: white;">Add notes here:
+MOT Garage 01224 345675</textarea>
+<br/>
+<button id="btn1" style="display:none"><img src="img/new_note1.png" alt="reg"/></button>
+</p>
+</div>
+<!------ Tabs !------>
+
+<div class="three-content">
+
+<div id="car_info_tab">
+
+	<div id="car_info_icon">
+    
+    <img src="img/car_info.png" alt="Car info icon"/>
+    
+    </div>
+    
+    <p class="mot_title">Car Details </p>
+    
+    </div>
+
+</div>
+
+<div class="three-content">
+<div id="mot">
+
+<div id="mot_icon">
+
+<img src="img/mot_icon.png" alt="Mot icon"/>
+
+</div>
+
+<p class="mot_title">M.O.T History </p>
+
+</div>
+
+</div>
+
+<div class="three-content">
+
+<div id="mileage">
+
+<div id="mileage_icon">
+
+<img src="img/graph_icon.png" alt="Graph"/>
+
+</div>
+
+<p class="mileage_title">Mileage</p>
+
+</div>
+
+</div>
+
+<div class="three-content">
+
+<div id="garage">
+
+<div id="garage_icon">
+
+<img src="img/garage_icon.png" alt="Garage icon"/>
+
+</div>
+
+<p class="garage_title">My Garage </p>
+
+</div>
+
+</div>
+
+<div class="three-content">
+
+<div id="services">
+
+<div id="service_icon">
+
+<img src="img/spanner.png" alt="Service icon"/>
+
+</div>
+
+<p class="service_title">Services </p>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

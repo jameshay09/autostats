@@ -1,0 +1,1068 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	padding: 0;
+	margin: 0;
+	max-width: 100%;
+}
+body {
+	max-width: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: 'Muli', sans-serif;
+	overflow-x: hidden;
+	overflow:hidden;
+}
+span {
+	display: none;
+	visibility: hidden;
+}
+#loader{
+	position:relative;
+	width:100%;
+	height:100vh;
+	background-color:#735d7e;
+	z-index:100;
+}
+#loader_logo{
+	position:absolute;
+	left:42%;
+	top:32vh;
+	height:450px;
+	width:300px;
+	z-index:101;
+}
+#chart_div{
+	padding-top: 4%;
+	width: 50%;
+	margin:auto;
+}
+.loader{
+	position:absolute;
+  height: 200px;
+  width: 30%;
+  text-align: center;
+  padding: 2em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+  left:23.2%;
+}
+
+/*
+  Set the color of the icon
+*/
+svg path,
+svg rect{
+  fill: #FFFFFF;
+}
+#home {
+	width: 100%;
+	height: 100vh;
+	background: url(../img/car_hero1.jpg) center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index:50;
+}
+#logo{
+	position:absolute;
+	width:175px;
+	height:175px;
+	left:45%;
+	top:8vh;
+	z-index:1;	
+}
+.burger {
+	position: fixed;
+	z-index: 50;
+	cursor: pointer;
+}
+.resp-nav {
+	display: block;
+	visibility: visible;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	background: #735d7e;
+	z-index:49;
+	opacity: 0.9;
+}
+.resp-link {
+	display: block;
+	width: 100%;
+	height: 65px;
+	font-size: 72px;
+	text-align: center;
+	color: #fff;
+	z-index: 1;
+	padding-top: 5%;
+	text-decoration: none;
+	font-weight: 300;
+}
+.resp-link:hover {
+	color: #313131;
+	transition: 0.3s;
+}
+.login_icon{
+	float:right;
+	z-index: 50;
+	cursor: pointer;
+}
+.wrapper{
+	width:100%;
+	height:100%;
+	background-color:#000000;
+	opacity:0.9;
+	z-index:60;
+	position:absolute;
+}
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.user{
+	position: absolute;
+	left: 93%;
+	top:1vh;
+	cursor: pointer;
+	z-index: 20;
+}
+#login_container{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-color:#000000;
+	opacity:0.9;
+	z-index:51;
+}
+.login {
+	position:absolute;
+    border: 3px solid #f1f1f1;
+	width:20%;
+	left:40%;
+	top:25vh;
+	background-color:#735d7e;
+}
+input[type=poop] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.login_button {
+    background-color: #f44336;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    opacity: 0.8;
+}
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+.container {
+    padding: 16px;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+.title {
+	position:absolute;
+	left:28%;
+	top:39vh;
+	font-size: 3.90vw;
+	color: #54415c;
+	letter-spacing: 8px;
+	z-index:1;	
+}
+.ltd {
+	position:absolute;
+	left:42.5%;
+	top:48vh;
+	font-size: 3.90vw;
+	color: #54415c;
+	letter-spacing: 8px;
+	z-index:1;	
+}
+.reg{
+	position:absolute;
+	top:72vh;
+	left:43%;
+	z-index:1;
+	cursor:pointer;
+}
+#vehicleReg { 
+   width: 70%;
+    margin-left:15%;
+   background-color: transparent;
+    border:0;
+	text-align:center;
+    font-weight: bold;
+    line-height: 50px;
+    font-size: 28px;
+    text-transform:uppercase;
+    position:relative; 
+	z-index:2;
+}
+.search{
+	width:28px;
+	height:28px;
+	margin-top:1%;
+	margin-right:2%;
+	float:right;
+	cursor:pointer;
+}
+#stats{
+	position:absolute;
+	width:100%;
+	height:100vh;
+}
+
+#car_info{
+	width:100%;
+	height:70vh;
+	background: linear-gradient(to right, #7474bf , #348ac7);
+}
+.Vehicle_details_title{
+	position:absolute;
+	left:46%;
+	top:1vh;
+	color:white;
+	font-size:26px;
+}
+.reg_title{
+	position:absolute;
+	left:45%;
+	top:6vh;
+	height:100px;
+}
+.submit{
+background: #3d3242;
+color: white;
+border-style: outset;
+height: 30px;
+width: 75px;
+text-shadow:none;	
+margin-left:35%;
+}
+.reg_title input[type="text"]{
+	padding-left:2%;
+	text-align:center;
+	border: none;
+	background:transparent;
+	outline: none;
+	background-image:url(../img/plate.png);
+	line-height:48px;
+	width:200px;
+	height:44px;
+}
+
+#details{
+	position:absolute;
+	left:14%;
+	top:19vh;	
+	color:white;
+	font-size:20px;
+	letter-spacing:2px; 
+	line-height: 40px;
+}
+.road_tax{
+	color:white;
+	font-size:20px;
+	letter-spacing:2px; 
+	line-height: 40px;
+}
+#mot_details{
+	position:absolute;
+	left:68%;
+	top:19vh;	
+	color:white;
+	font-size:20px;
+	letter-spacing:2px;
+	line-height:40px;
+}
+.mot_status{
+	position:absolute;
+	left:68%;
+	top:22vh;	
+	color:white;
+	font-size:20px;
+	letter-spacing:2px;
+}
+#expire{
+	position:absolute;
+	left:76%;
+	top:21.5vh;	
+}
+#days{
+	position:absolute;
+	left:76%;
+	top:24.5vh;	
+}
+#tax_expire{
+	position:absolute;
+	left:76%;
+	top:45.5vh;	
+}
+#tax_days{
+	position:absolute;
+	left:76%;
+	top:45.5vh;	
+}
+.mot_days{
+	position:absolute;
+	left:68%;
+	top:24.5vh;	
+	color:white;
+	font-size:20px;
+	letter-spacing:2px;	
+}
+.road_tax{
+	position:absolute;
+	left:68%;
+	top:45vh;	
+	color:white;
+	font-size:20px;
+	letter-spacing:2px;
+}
+.tax_status{
+	position:absolute;
+	left:68%;
+	top:49.5vh;	
+	color:white;
+	font-size:20px;
+	letter-spacing:2px;
+}
+/*Mot section */
+#mot_history{
+}
+#mot_info{
+	width:100%;
+	height:70vh;
+	background: linear-gradient(to right, #7474bf , #348ac7);
+}
+#top_cont{
+	position:relative;
+	width:65%;
+	height:18vh;
+	left:29%;
+	top:16vh;
+}
+#mot_box1{
+	width:15%;
+	height:100%;
+	background-color:#91c09f;
+	float:left;
+	margin-left:1%;
+	margin-right:1%;
+	max-width:100%;
+	cursor:pointer;
+	 border-radius: 25px;
+}
+#mot_box2{
+	width:15%;
+	height:100%;
+	background-color:#91c09f;
+	float:left;
+	margin-left:1%;
+	margin-right:1%;
+	max-width:100%;
+	cursor:pointer;
+	 border-radius: 25px;
+}
+#mot_box3{
+	width:15%;
+	height:100%;
+	background-color:#91c09f;
+	float:left;
+	margin-left:1%;
+	margin-right:1%;
+	max-width:100%;
+	cursor:pointer;
+	 border-radius: 25px;
+}
+#mot_box4{
+	width:15%;
+	height:100%;
+	background-color:#91c09f;
+	float:left;
+	margin-left:1%;
+	margin-right:1%;
+	max-width:100%;
+	cursor:pointer;
+	 border-radius: 25px;
+}
+#bot_cont{
+	position:relative;
+	width:65%;
+	height:18vh;
+	left:29%;
+	top:19vh;
+}
+#mot_box5{
+	width:15%;
+	height:100%;
+	background-color:#91c09f;
+	float:left;
+	margin-left:1%;
+	margin-right:1%;
+	max-width:100%;
+	cursor:pointer;
+	 border-radius: 25px;
+}
+#mot_box6{
+	width:15%;
+	height:100%;
+	background-color:#91c09f;
+	float:left;
+	margin-left:1%;
+	margin-right:1%;
+	max-width:100%;
+	cursor:pointer;
+	 border-radius: 25px;
+}
+#mot_box7{
+	width:15%;
+	height:100%;
+	background-color:#91c09f;
+	float:left;
+	margin-left:1%;
+	margin-right:1%;
+	max-width:100%;
+	cursor:pointer;
+	 border-radius: 25px;
+}
+#mot_box8{
+	width:15%;
+	height:100%;
+	background-color:#91c09f;
+	float:left;
+	margin-left:1%;
+	margin-right:1%;
+	max-width:100%;
+	cursor:pointer;
+	 border-radius: 25px;
+}
+.pass{
+	color:white;
+	font-size:22px;
+	float:right;
+	margin-right:12%;
+	
+}
+.pass1{
+	color:white;
+	font-size:22px;
+	float:right;
+	margin-right:12%;
+	
+}
+
+.pass2{
+	color:white;
+	font-size:22px;
+	float:right;
+	margin-right:12%;
+	
+}
+
+.pass3{
+	color:white;
+	font-size:22px;
+	float:right;
+	margin-right:12%;
+	
+}
+
+.pass4{
+	color:white;
+	font-size:22px;
+	float:right;
+	margin-right:12%;
+	
+}
+
+.pass5{
+	color:white;
+	font-size:22px;
+	float:right;
+	margin-right:12%;
+	
+}
+
+.pass6{
+	color:white;
+	font-size:22px;
+	float:right;
+	margin-right:12%;
+	
+}
+.pass7{
+	color:white;
+	font-size:22px;
+	float:right;
+	margin-right:12%;
+	
+}
+.mot_test{
+	color:white;
+	font-size:18px;	
+	margin-left:2%;
+	margin-right:2%;
+}
+.mot_test1{
+	color:white;
+	font-size:18px;	
+	margin-left:2%;
+	margin-right:2%;
+}
+.mot_test2{
+	color:white;
+	font-size:18px;	
+	margin-left:2%;
+	margin-right:2%;
+}
+.mot_test3{
+	color:white;
+	font-size:18px;	
+	margin-left:2%;
+	margin-right:2%;
+}
+.mot_test4{
+	color:white;
+	font-size:18px;	
+	margin-left:2%;
+	margin-right:2%;
+}
+.mot_test5{
+	color:white;
+	font-size:18px;	
+	margin-left:2%;
+	margin-right:2%;
+}
+.mot_test6{
+	color:white;
+	font-size:18px;	
+	margin-left:2%;
+	margin-right:2%;
+}
+.mot_test7{
+	color:white;
+	font-size:18px;	
+	margin-left:2%;
+	margin-right:2%;
+}
+#mot_issues{
+	position:absolute;
+	width:50%;
+	height:45vh;
+	left:26%;
+	top:15vh;	
+	background-color:#3d3242 ;
+	 border-radius: 25px;
+	
+}
+#mot_issues1{
+	position:absolute;
+	width:50%;
+	height:45vh;
+	left:26%;
+	top:15vh;	
+	background-color:#3d3242 ;
+	 border-radius: 25px;
+	
+}
+#mot_issues2{
+	position:absolute;
+	width:50%;
+	height:45vh;
+	left:26%;
+	top:15vh;	
+	background-color:#3d3242 ;
+	 border-radius: 25px;
+	
+}
+#mot_issues3{
+	position:absolute;
+	width:50%;
+	height:45vh;
+	left:26%;
+	top:15vh;	
+	background-color:#3d3242 ;
+	 border-radius: 25px;
+	
+}
+#mot_issues4{
+	position:absolute;
+	width:50%;
+	height:45vh;
+	left:26%;
+	top:15vh;	
+	background-color:#3d3242 ;
+	 border-radius: 25px;
+	
+}
+#mot_issues5{
+	position:absolute;
+	width:50%;
+	height:45vh;
+	left:26%;
+	top:15vh;	
+	background-color:#3d3242 ;
+	 border-radius: 25px;
+	
+}
+#mot_issues6{
+	position:absolute;
+	width:50%;
+	height:45vh;
+	left:26%;
+	top:15vh;	
+	background-color:#3d3242 ;
+	 border-radius: 25px;
+	
+}
+#mot_issues7{
+	position:absolute;
+	width:50%;
+	height:45vh;
+	left:26%;
+	top:15vh;	
+	background-color:#3d3242 ;
+	 border-radius: 25px;
+	
+}
+.cross{
+	position:absolute;
+	float:right;
+	width:25px;
+	height:25px;
+	right:2%;
+	top:2vh;
+	cursor:pointer;	
+	
+}
+.mot_issue_title{
+	position:absolute;
+	left:42%;
+	top:2vh;
+	font-size:22px;
+	color:white;
+}
+.mot_overview{
+position:absolute;
+left:4%;
+top:8vh;
+color:white;
+font-size:17px;
+line-height:35px;	
+}
+.mot_overview1{
+position:absolute;
+left:4%;
+top:8vh;
+color:white;
+font-size:17px;
+line-height:35px;	
+}
+.mot_overview2{
+position:absolute;
+left:4%;
+top:8vh;
+color:white;
+font-size:17px;
+line-height:35px;	
+}
+.mot_overview3{
+position:absolute;
+left:4%;
+top:8vh;
+color:white;
+font-size:17px;
+line-height:35px;	
+}
+.mot_overview4{
+position:absolute;
+left:4%;
+top:8vh;
+color:white;
+font-size:17px;
+line-height:35px;	
+}
+.mot_overview5{
+position:absolute;
+left:4%;
+top:8vh;
+color:white;
+font-size:17px;
+line-height:35px;	
+}
+.mot_overview6{
+position:absolute;
+left:4%;
+top:8vh;
+color:white;
+font-size:17px;
+line-height:35px;	
+}
+.mot_overview7{
+position:absolute;
+left:4%;
+top:8vh;
+color:white;
+font-size:17px;
+line-height:35px;	
+}
+/*Mileage section */
+
+#mileage_details{
+	width:100%;
+	height:70vh;
+	background: linear-gradient(to right, #7474bf , #348ac7);
+	
+}
+
+#graph_image{
+	width: 50%;
+	margin: auto;
+}
+
+
+.mileage_avg{
+	position: absolute;
+	color: white;
+	top: 60vh;
+	left: 29%;
+	font-size: 20px;
+	
+}
+
+.mileage_high{
+	position: absolute;
+	color: white;
+	top: 60vh;
+	left: 58%;
+	font-size: 20px;
+}
+
+
+
+/* garage section */
+#mygarage{
+	width:100%;
+	height:70vh;
+	background: linear-gradient(to right, #7474bf , #348ac7);	
+}
+
+.garage_details	{
+	position: relative;
+	left: 8%;
+	top: 29vh;
+	color: white;
+	font-size: 20px;
+	letter-spacing: 2px;
+	width: 455px;
+  float: left;
+}
+#car_1{
+	position:absolute;
+	left:4%;
+	top:17vh;
+	width:325px;
+	height:200px;
+}
+#car_2{
+	position:absolute;
+	left:28%;
+	top:17vh;
+	width:325px;
+	height:200px;
+}
+#car_3{
+	position:absolute;
+	left:52%;
+	top:17vh;
+	width:325px;
+	height:200px;
+}
+#new_car{
+	position:absolute;
+	left:75%;
+	top:17vh;
+	width:325px;
+	height:200px;
+}
+
+#service_info{
+	width:100%;
+	height:70vh;
+	background: linear-gradient(to right, #7474bf , #348ac7);
+}
+
+.service_details	{
+	position: relative;
+	left: 5%;
+	top: 20vh;
+	color: white;
+	font-size: 20px;
+	letter-spacing: 2px;
+	width: 435px;
+  float: left;
+	margin-right: 20px;
+}
+
+#btn {
+    background-color: #4f80c3;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+#btn1 {
+    background-color: #4f80c3;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* tab section */
+#car_info_tab{
+	position:relative;
+	height:30vh;
+	width:20%;
+	background-color:#677bc0;
+	float:left;
+	cursor:pointer;
+}
+#car_info_icon{
+	position:absolute;
+	left:37%;
+	top:7vh;
+	width:110px;
+	height:110px;	
+}
+#mot{
+	position:relative;
+	height:30vh;
+	width:20%;
+	background-color:#b4a7e9;
+	float:left;
+	cursor:pointer;
+}
+.three-content:hover {
+	opacity: 0.5;
+	transition:0.5s;
+	cursor:pointer;
+}
+#mot_icon{
+	position:absolute;
+	left:37%;
+	top:7vh;
+	width:110px;
+	height:110px;	
+}
+.mot_title{
+	position:absolute;
+	top:20vh;
+	left:27%;
+	color:white;
+	font-size:1.70vw;
+}
+#mileage{
+	position:relative;
+	height:30vh;
+	width:20%;
+	background-color:#735d7e;
+	float:left;
+}
+#mileage_icon{
+	position:absolute;
+	left:37%;
+	top:8vh;
+	width:110px;
+	height:110px;	
+}
+.mileage_title{
+	position:absolute;
+	top:20vh;
+	left:38%;
+	color:white;
+	font-size:1.70vw;
+}
+#garage{
+	position:relative;
+	height:30vh;
+	width:20%;
+	background-color:#7b98ef;
+	float:left;
+}
+#garage_icon{
+	position:absolute;
+	left:37%;
+	top:10vh;
+	width:120px;
+	height:120px;	
+}
+.garage_title{
+	position:absolute;
+	top:20vh;
+	left:31%;
+	color:white;
+	font-size:1.70vw;
+}
+#icons{
+	position:absolute;
+	width:5%;
+	height:30vh;
+	left:4%;
+	top:30vh;	
+}
+#icons1{
+	position:absolute;
+	width:5%;
+	height:30vh;
+	left:28%;
+	top:30vh;	
+}
+#icons2{
+	position:absolute;
+	width:5%;
+	height:30vh;
+	left:52%;
+	top:30vh;	
+}
+#services{
+	position:relative;
+	height:30vh;
+	width:20%;
+	background-color:#7374bf;
+	float:left;
+}
+#service_icon{
+	position:absolute;
+	left:42.5%;
+	top:10vh;
+	width:80px;
+	height:80px;	
+}
+.service_title{
+	position:absolute;
+	top:20vh;
+	left:34.5%;
+	color:white;
+	font-size:1.70vw;	
+}
+#contact{
+	position:relative;
+	width:100%;
+	height:100vh;
+}
+#contact_title{
+	position:absolute;
+	text-align:center;
+	width:48%;
+	top:48vh;
+	letter-spacing:2px;
+	height:52px;
+	color:white;
+	font-size:1.59vw;
+}
+#contact_1{
+	width: 50%;
+	height: 100vh;
+	background-image: url(../img/contact_img.jpg);
+	float: left;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#contact_img{
+	position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-115px;
+	margin-top:-100px;
+    z-index: 20;
+	width:225px;
+	height:150px;
+	}
+#contact_2{
+	position:relative;
+	width: 50%;
+	height: 100vh;
+	float:left;
+}
+.contact_text{
+	font-size:1.40vw;
+	width:62%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:3%;
+	text-align:left;
+	letter-spacing: 3px;
+}
+input[type="text"]{
+   	 font-size:20px;	
+}
+
+input[type="submit"]{
+	margin-left:25%;
+}
+textarea{
+	font-size:20px;
+}
+#form1{
+	position:absolute;
+	left:28%;
+	top:35vh;
+}

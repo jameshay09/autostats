@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Auto Stats</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+    <script src="js/jquery-2.2.2.js">
+	</script>
+	<script src="js/jquery.arbitrary-anchor.js" type="text/javascript">
+	</script>
+    
+      <script>
+    	$(document).ready(function() {
+	  $('.resp-nav').hide();
+	  $('.burger').click(function() {
+	   $('.resp-nav').slideToggle(750);
+	   });
+	   
+	       $('.resp-nav').click(function() {
+	       $('.resp-nav').fadeOut(600);
+	       }); 
+		   
+		       $('#login_container').hide();
+	           $('.login_icon').click(function(){
+	               $('#login_container').fadeIn(600);
+	           
+	           }); 
+	           
+	           $('.login_button').click(function(){
+	               $('#login_container').fadeOut(600);
+	           
+	           }); 
+	           
+	           $('.cancelbtn').click(function(){
+	               $('#login_container').fadeOut(600);
+	               });
+	               
+	               $('.wrapper, .cross8').hide();
+	               $('.search_icon').click(function(){
+	                   $('.wrapper, .cross8').fadeIn(600);
+	               }); 
+	               
+	               $('.searchButton').click(function(){
+	                   $('.wrapper, .cross8').fadeOut(600);
+	                   
+	                   }); 
+	                                 
+	               $('.cross8').click(function(){
+	                   $('.wrapper, .cross8').fadeOut(600);
+	                   
+	                   }); 
+					     }); 
+					   
+					   </script>
+
+</head>
+
+<body>
+
+<div id="contact">
+
+<div class="burger"><img alt="navigation" src="img/burger.png"></div>
+
+	<div class="resp-nav">
+			<a class="resp-link" href="index.html"><b>Home</b></a> 
+             <a class="resp-link" href="contact.html"><b>Contact</b></a>
+		</div>
+
+<div class="login_icon"><img alt="search" src="img/login.png"></div>
+
+	<div id="login_container">
+			<form action="/action_page.php" class="login">
+				<div class="imgcontainer"><img alt="Avatar" class="avatar" src="img/user_1.png"></div>
+				<div class="container">
+					<label><b>Username</b></label>
+                     <input name="uname" placeholder="Test_account" required="" type="poop"> <label><b>Password</b></label> <input name="psw" placeholder="Test_account" required="" type="password"> <input class="login_button" type="button" value="Log in"> <input checked="checked" type="checkbox"> Remember me
+				</div>
+				<div class="container" style="background-color:#f1f1f1">
+					<button class="cancelbtn" type="button">Cancel</button> <span class="psw">Forgot <a href="#">password?</a></span>
+				</div>
+			</form>
+		</div>
+        
+
+		<h4 class="contact"><span><a class="slide-products">Contact</a></span></h4>
+		<div id="contact_1">
+			<div id="contact_title">
+				<h2>Contact</h2>
+			</div>
+		</div>
+		<div id="contact_img"><img alt="logo" src="img/logo.png" style="width:100%"></div>
+		<div id="contact_2">
+			<p class="contact_text"><strong>If you wish to leave any feedback or have any enquiries, please feel free to fill out the contact form below.<br>
+			<br>
+			Thank you</strong></p>
+			<div id="form1">
+				<form action="send_form_email.php" id="contactform" method="post" name="contactform">
+					<table>
+						<tr>
+							<td><label><b>First Name *</b></label></td>
+							<td><input maxlength="50" name="first_name" size="25" type="text"></td>
+						</tr>
+						<tr>
+							<td><label><b>Last Name *</b></label></td>
+							<td><input maxlength="50" name="last_name" size="25" type="text"></td>
+						</tr>
+						<tr>
+							<td><label><b>Email Address *</b></label></td>
+							<td><input maxlength="80" name="email" size="25" type="text"></td>
+						</tr>
+						<tr>
+							<td><label><b>Comments *</b></label></td>
+							<td>
+							<textarea cols="25" maxlength="1000" name="comments" rows="6"></textarea></td>
+						</tr>
+						<tr>
+							<td colspan="2" style="text-align:center"><input type="submit" value="Submit"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+
+</div>
+</body>
+</html>
